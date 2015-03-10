@@ -1,0 +1,31 @@
+<template name="home">
+	<div class="jumbotron seven-five-seven container-fluid">
+		<div class="container text-center">
+			<div class="row">
+				<p>
+					<small><strong>A job board and community space for Hampton Roads developers.</strong></small>
+					<br><br>
+					Browse the <a href="{{pathFor 'jobs'}}">{{getPublishedCount 'jobs'}} active job postings</a> or <a href="{{pathFor 'profileNew'}}">create your profile</a> to join the <a href="{{pathFor 'profiles'}}">{{getPublishedCount 'developers'}} registered developers</a>.
+				</p>
+			</div>
+
+			<!-- <div id="callToAction" class="row">
+				<a class="col-sm-4 col-sm-offset-1 col-xs-12 text-center btn btn-primary btn-md" role="button" href="{{pathFor 'jobNew'}}">Post A Job</a>
+				<a class="col-sm-4 col-sm-offset-2 col-xs-12 text-center btn btn-success btn-md" role="button" href="{{pathFor 'profileNew'}}">Create a Profile</a>
+			</div> -->
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				{{>jobsRecent}}
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-sm-12">
+				{{>profilesRecent}}
+			</div>
+		</div>
+	</div>
+</template>
